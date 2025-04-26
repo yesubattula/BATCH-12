@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vignan Hostel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url('hostel1.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6); 
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); 
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            position: relative;
+            text-align: left;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu-toggle div {
+            width: 100%;
+            height: 5px;
+            background: #fff;
+            margin: 5px 0;
+            transition: 0.3s ease;
+        }
+
+        .menu-content {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000; 
+        }
+
+        .menu-content a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 0;
+        }
+
+        .menu-content a:hover {
+            color: #007BFF; /* Highlight menu items on hover */
+        }
+
+        /* Gallery Styling */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item p {
+            text-align: center;
+            font-size: 18px;
+            padding: 10px 0;
+            background: #f4f4f4;
+            margin: 0;
+            color: #000;
+        }
+
+        /* Login Button Styling */
+        .center-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .center-button a {
+            display: inline-block;
+            text-decoration: none;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .center-button a:hover {
+            background: #0056b3; /* Highlight login button on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent footer background */
+            color: #fff;
+            margin-top: auto; /* Ensures footer stays at the bottom */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dropdown Menu -->
+    <div class="menu">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-content" id="menu-content">
+            <a href="facility.html">Facilities</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <h1>Vignan Hostel</h1>
+        <p>Your Comfort, Our Priority</p>
+    </header>
+
+    <!-- Room Image Gallery Section -->
+    <section>
+        <h2>Rooms Available</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="hostel2.jpg" alt="Single Room">
+                <p>Single Room</p>
+            </div>
+            <div class="gallery-item">
+                <img src="hostel3.jpg" alt="Double Room">
+                <p>Double Room</p>
+            </div>
+            <div class="gallery-item">
+                <img src="hostel4.jpg" alt="Shared Dormitory">
+                <p>Shared Dormitory</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Button Section -->
+    <section>
+        <div class="center-button">
+            <a href="login.html">Login</a> <!-- Centered Login Button -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Vignan Hostel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for dropdown menu toggle
+        function toggleMenu() {
+            const menuContent = document.getElementById('menu-content');
+            if (menuContent.style.display === 'block') {
+                menuContent.style.display = 'none'; // Hide the menu
+            } else {
+                menuContent.style.display = 'block'; // Show the menu
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #007BFF;
+      color: #fff;
+    }
+
+    section {
+      margin: 20px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-home {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-home:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007BFF;
+      color: #fff;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Booking Confirmation</h1>
+  </header>
+
+  <section id="booking-details">
+    <h2>Your Booking Details</h2>
+    <p><strong>Name:</strong> <span id="display-name"></span></p>
+    <p><strong>Email:</strong> <span id="display-email"></span></p>
+    <p><strong>Room Type:</strong> <span id="display-room-type"></span></p>
+    <p><strong>Check-in Date:</strong> <span id="display-check-in"></span></p>
+    <p><strong>Room Fee:</strong> <span id="display-fee"></span></p>
+
+    <div class="btn-container">
+      <a class="btn-home" href="hostel.html">Go Back to Home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vignan Hostel. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const data = JSON.parse(sessionStorage.getItem("bookingData"));
+    if (data) {
+      document.getElementById("display-name").textContent = data.name;
+      document.getElementById("display-email").textContent = data.email;
+      document.getElementById("display-room-type").textContent = data.roomTypeText;
+      document.getElementById("display-check-in").textContent = data.checkInDate;
+      document.getElementById("display-fee").textContent = data.feeText;
+    } else {
+      document.getElementById("booking-details").innerHTML = "<p>No booking details found.</p>";
+    }
+  </script>
+</body>
+</html>

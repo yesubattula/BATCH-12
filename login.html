@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vignan Hostel</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF; /* Blue background for header */
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        section {
+            flex: 1; /* Ensures the section takes up available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center; /* Ensures all content inside is centered */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            display: block; /* Make labels block-level for proper spacing */
+            text-align: left; /* Align labels to the left */
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100px; /* Control button width */
+            margin: 0 auto; /* Center the button horizontally */
+            display: block; /* Ensure proper centering in the form */
+        }
+
+        form input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #007BFF;
+            color: #fff;
+            margin-top: auto; /* Pushes footer to the bottom of the page */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Vignan Hostel - Login</h1>
+    </header>
+
+    <!-- Login Form -->
+    <section>
+        <div class="form-container">
+            <h2>Login to your account</h2>
+            <form action="booking.html" method="POST"> <!-- Redirects to booking.html -->
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Vignan Hostel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
